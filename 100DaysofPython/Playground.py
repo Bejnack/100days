@@ -1,4 +1,6 @@
-stop=""
+import os
 
-while stop != "yes":
-    stop = input("Do you want to stop?")
+print("hello")
+a = input()
+if a == "yes":
+    os.system('cls')
