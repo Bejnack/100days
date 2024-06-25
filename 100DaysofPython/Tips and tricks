@@ -1,2 +1,6 @@
 ctr + k + c --> add comment
 ctr + k + u --> remove comment
+
+git add *
+git commit -m 'message'
+git push
