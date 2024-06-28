@@ -68,8 +68,7 @@ def blackjack():
     user_score = calculate_score(user_card)
     computer_score = calculate_score(computer_card)
 
-    print(f"""Player cards {user_card}, sum of player {calculate_score(user_card)}
-    Cards for computer {computer_card}, computer sum {calculate_score(computer_card)}""")
+    print(f"""Player cards {user_card}, sum of player {calculate_score(user_card)} \nComputer cards {computer_card}, computer sum {calculate_score(computer_card)}""")
 
     if user_score == 0:
         print("Blackjack, you win")
@@ -88,7 +87,10 @@ def blackjack():
             print(f"User score: {user_score}")
             if user_score > 21:
                 should_continue = compare(user_score,computer_score)
-                blackjack()
+                if input("Do you want another game? 'y' or 'n' ") == "y":
+                    blackjack()
+                else:
+                    break
 
         while computer_score < 17:
             computer_card.append(deal_card())
@@ -97,7 +99,9 @@ def blackjack():
         should_continue = compare(user_score,computer_score)
         should_continue
         if should_continue == False:
-            blackjack()
-
+            if input("Do you want another game? 'y' or 'n' ") == "y":
+                blackjack()
+            else:
+                break
 
 blackjack()
