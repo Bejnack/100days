@@ -1,9 +1,2 @@
-def my_function(a):
-    if a < 40:
-        return
-        print("Terrible")
-    if a < 80:
-        return "Pass"
-    else:
-        return "Great"
-print(my_function(25))
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+print(len(cards))
