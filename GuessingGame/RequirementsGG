@@ -1,0 +1,18 @@
+The software shall display an ascii art at the beginning
+The game shall begin with the following text:"I'm thinking of a number between 1 and 100."
+The game shall display the correct answer as displayed here: "Psssst, the correct answer is 'correct answer'"
+The game shall ask for a difficulty level
+The game shall choose a random number between 1 and 100
+The user shall be able to choose between easy and hard
+If the user chose easy the software shall let the user input 10 numbers
+If the user chose easy the software shall print "You have 10 attempts remaining to guess the number."
+if the user chose hard the software shall let the user input 5 numbers
+if the user chose hard the software shall print "You have 5 attempts remaining to guess the number."
+Until the user inputs a number the software shall display "Make a guess"
+The software shall read the users input
+If the users input was lower than the goal number, the software shall display "Too low" "Guess again." "You have '-1' attempts remaining to guess the number."(-1 = easy 10-1 = 9; hard 5-1 = 4 and so on)
+If the users input was higher than the goal number, the software shall display "Too high" "Guess again." "You have '-1' attempts remaining to guess the number."(-1 = easy 10-1 = 9;  
+If the remaining attempts == 0, the software shall print "No attempts remaining." "Game Over!"
+If the user guesses the number, the software shall print "You got it! The answer was 'goal number'."
+if remaining attempts == 0 or user guessed the number, the software shall print "Do you want to try again 'yes'  or 'no' ?"
+If the user inputs 'yes' the game shall restart and generate a new random number between 1-100
