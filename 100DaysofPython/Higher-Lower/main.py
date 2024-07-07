@@ -1,5 +1,5 @@
-import random
 import os
+import random
 from art import logo, vs
 from game_data import data
 
@@ -33,10 +33,9 @@ while game_should_continue:
 
     #Generate a random account from the game data
     account_a = account_b
-    account_b = random.choice(data)
-    
+    account_b = random.choice(data)   
     while account_a == account_b:
-        account_b = random.choice(data)    
+        account_b = random.choice(data)
 
     print(f"Compare A: {format_data(account_a)}.")
     print(vs)
@@ -66,11 +65,4 @@ while game_should_continue:
     else:
         game_should_continue = False
         print(f"Sorry, that's wrong. Final score {score}.")
-
-   
-
-    
-
-    
-
-    
+        #End of file
