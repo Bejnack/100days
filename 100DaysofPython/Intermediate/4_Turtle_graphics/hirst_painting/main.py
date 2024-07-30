@@ -1,6 +1,6 @@
 # import colorgram
 
-# colors = colorgram.extract('D:\\100days\\100DaysofPython\\Intermediate\\3_Turtle_graphics\\hirst_painting\\image.jpg', 25)
+# colors = colorgram.extract('D:\\100days\\100DaysofPython\\Intermediate\\4_Turtle_graphics\\hirst_painting\\image.jpg', 25)
 
 # rgb_colors =[]
 
