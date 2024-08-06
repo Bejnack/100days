@@ -27,6 +27,24 @@ class Snake:
             new_segment.goto(position)
             self.segments.append(new_segment)
 
+    def extend(self):
+        """_summary_
+        """
+        #add a new segment to snake
+        self.add_segment(self.segments[-1].position())
+
+    def add_segment(self, position):
+        """_summary_
+
+        Args:
+            position (_type_): _description_
+        """
+        new_segment = Turtle("square")
+        new_segment.penup()
+        new_segment.color('white')
+        new_segment.goto(position)
+        self.segments.append(new_segment)
+
 
     def move(self):
         """Snake movement constant
