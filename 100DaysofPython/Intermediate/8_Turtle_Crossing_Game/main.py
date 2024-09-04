@@ -10,34 +10,29 @@ screen.tracer(0)
 
 player = Player()
 scoreboard = Scoreboard()
+car_manager = CarManager()
 
 #car_manager = CarManager()
 screen.listen()
 screen.onkey(player.go_up, "Up")
 screen.onkey(player.go_down, "Down")
 
-car_list = []
-car_generation_counter = 0
-
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+
+    #Create car
+    car_manager.create_car()
+    car_manager.move_car()
     
-    #Generate cars and move
-    if car_generation_counter == 7:
-        car_manager = CarManager()
-        car_list.append(car_manager)
-        car_generation_counter = 0
-    for car in car_list:
-        car.car_move()
-        if car.distance(player) < 24:
-            game_is_on = False
-    car_generation_counter += 1
-    
+    for car in car_manager.all_cars:
+        if car.distance(player) <20:
+            game_is_on = scoreboard.game_over()
     #Finish line
     if player.finished_level():
         scoreboard.score_level_cleared()
-        car_manager.increase_speed()
-    
+        car_manager.level_up()
+        
+
 screen.exitonclick()
