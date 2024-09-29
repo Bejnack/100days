@@ -12,3 +12,8 @@ emoji keyboard is windows + .
 ☕☕☕☕☕☕☕
 
 format -> ctrl + shift + p
+
+# To format amount of decimal numbers use:("%.2f" % number_you_want_to_format)
+    
+    mile_in_km = miles * 1.609
+    kilometers.config(text=("%.2f" % mile_in_km))
